@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "titles",
+  "info": {
+    "singularName": "title",
+    "pluralName": "titles",
+    "displayName": "title"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "number": {
+      "type": "integer"
+    }
+  }
+}
