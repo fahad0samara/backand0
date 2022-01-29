@@ -4,7 +4,8 @@
   "info": {
     "singularName": "title",
     "pluralName": "titles",
-    "displayName": "title"
+    "displayName": "title",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,16 +16,48 @@
       "type": "string"
     },
     "img": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "number": {
       "type": "integer"
+    },
+    "true": {
+      "type": "boolean"
+    },
+    "data": {
+      "type": "time"
+    },
+    "titles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::title.title",
+      "mappedBy": "title"
+    },
+    "title": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::title.title",
+      "inversedBy": "titles"
+    },
+    "add": {
+      "displayName": "compant",
+      "type": "component",
+      "repeatable": false,
+      "component": "category.compant"
+    },
+    "emai": {
+      "type": "email",
+      "required": true
+    },
+    "rich": {
+      "type": "richtext"
     }
   }
 }
