@@ -25,9 +25,6 @@
         "videos"
       ]
     },
-    "number": {
-      "type": "integer"
-    },
     "true": {
       "type": "boolean"
     },
@@ -58,6 +55,9 @@
     },
     "rich": {
       "type": "richtext"
+    },
+    "text": {
+      "type": "string"
     }
   }
 }
